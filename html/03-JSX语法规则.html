@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Hello React!</title>
+<!-- react 核心库 -->
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<!-- react-dom 用于支持react操作DOM -->
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<!-- babel 用于将JSX转为>JS -->
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+<style>
+    .title{
+        background-color: orange;
+        width: 200px;
+    }
+</style>
+</head>
+<body>
+<!-- 创建容器 -->
+<div id="example"></div>
+
+
+<!-- 此处一定要写 babel -->
+<script type="text/babel">
+    const myId = 'Makx';
+    const myData = 'Hello, Makx';
+    // 1.创建DOM
+    // const VDOM = <h1>Hello, React!</h1>
+    const VDOM = (
+        <h1 className='title' 
+            style={{color: 'red'}}
+            id={myId.toLocaleLowerCase()}>
+        {myData.toLocaleLowerCase()}
+        </h1>
+    )
+
+    // 2.渲染虚拟DOM到页面
+    // render 渲染（虚拟DOM，容器）
+    ReactDOM.render(
+        VDOM,
+        document.getElementById('example')
+    );
+    /* 
+    JSX语法规则：
+    1.定义虚拟DOM时不要写引号。
+    2.标签中混入JS表达式用{}
+    3.样式的类名不要用class 要用calssName
+    4.内联样式style={{color: 'red'}}
+
+    */
+
+</script>
+
+</body>
+</html>

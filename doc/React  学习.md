@@ -6,6 +6,8 @@
 
 ## P01-React 简介
 
+[入门教程: 认识 React – React (docschina.org)](https://react.docschina.org/tutorial/tutorial.html)
+
 1.什么是react？
 
 > React是用于构建用户界面的 JavaScript库。
