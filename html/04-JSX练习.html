@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Hello React!</title>
+<!-- react 核心库 -->
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<!-- react-dom 用于支持react操作DOM -->
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<!-- babel 用于将JSX转为>JS -->
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <!-- 小练习
+      需求：动态展示下面的列表
+      前端js框架列表
+      * Angular
+      * React
+      * Vue
+    -->
+<!-- 创建容器 -->
+<div id="example">
+    
+</div>
+
+<!-- 此处一定要写 babel -->
+<script type="text/babel">
+    // 1.创建DOM
+    // const VDOM = (
+    //     <div>
+    //         <h1>前端js框架列表</h1>
+    //         <ul>
+    //             <li>Angular</li>
+    //             <li>React</li>
+    //             <li>Vue</li>
+    //         </ul>
+    //     </div>
+    // )
+    
+    // 模拟后台动态传过来的数据
+    
+    // const data = {name1:'Angular', name2:'React', name3:'Vue'};
+    // const VDOM = (
+    //     <div>
+    //         <h1>前端js框架列表</h1>
+    //         <ul>
+    //             <li>{data.name1}</li>
+    //             <li>{data.name2}</li>
+    //             <li>{data.name3}</li>
+    //         </ul>
+    //     </div>
+    // )
+    // 数组遍历
+    const data = ['Angular', 'React', 'Vue'];
+     const VDOM = (
+        <div>
+            <h1>前端js框架列表</h1>
+            <ul>
+                {
+                    data.map((item, index) => {
+                        return <li key={index}>{item}</li>
+                    })
+                }
+            </ul>
+        </div>
+    )
+
+    // 2.渲染虚拟DOM到页面
+    // render 渲染（虚拟DOM，容器）
+    ReactDOM.render(
+        VDOM,
+        document.getElementById('example')
+    );
+</script>
+
+</body>
+</html>
