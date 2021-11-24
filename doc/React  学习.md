@@ -45,9 +45,13 @@
 
 
 
+## P03-使用react开发者调试工具
 
+> 在Edge或者Google浏览器的扩展插件里面搜索react
+>
+> 选择Facebook出品的扩展程序添加到浏览器里面
 
-
+![reactDev](../img/reactDev.png)
 
 
 
